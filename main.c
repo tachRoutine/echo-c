@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 
   while (arg_start_index < argc) {
     // I am making assumptions that options can only be 2 chars
-    if (strlen(argv[arg_start_index]) != 2 && argv[arg_start_index][0] != '-') {
+    if (strlen(argv[arg_start_index]) < 2 && argv[arg_start_index][0] != '-') {
       arg_start_index++;
       continue;
     }
@@ -36,7 +36,6 @@ int main(int argc, char **argv) {
     }
 
     arg_start_index++;
-    printf("done");
   }
 
   for (int i = 1; i < argc; i++) {
