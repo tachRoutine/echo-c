@@ -4,10 +4,12 @@
 
 struct Options {
     bool print_newline;
+    bool interpret_escapes;
 };
 
 int main(int argc, char **argv){
-    struct Options default_options = {true};
+    int arg_start_index = 1;
+    struct Options default_options = {true,false};
 
     for (int i = 1; i < argc; i++) {
         write(1, argv[i], strlen(argv[i]));
