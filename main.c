@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
     arg_start_index++;
   }
 
-  for (int i = 1; i < argc; i++) {
+  for (int i = arg_start_index; arg_start_index < argc; i++) {
     write(1, argv[i], strlen(argv[i]));
 
     if (i < argc - 1) {
