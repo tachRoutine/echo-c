@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
     // like echo something -e -n ...
     // i will read the original source code toknow more
     if (argv[arg_start_index][1] == 'n') {
-      options.print_newline = true;
+      options.print_newline = false;
     }
 
     if (argv[arg_start_index][1] == 'e') {
